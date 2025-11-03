@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semiconductor Industry Presentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* slate-100 */
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            padding: 2.5rem; /* p-10 */
+            background-color: white;
+            border-radius: 1.5rem; /* rounded-3xl */
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            aspect-ratio: 16 / 9;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .slide.active {
+            display: flex;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #4338ca, #be185d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-button {
+            position: fixed;
+            bottom: 2rem;
+            background-color: #4338ca; /* indigo-700 */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .nav-button:hover {
+             background-color: #3730a3; /* indigo-800 */
+             transform: translateY(-2px);
+        }
+        #prevBtn {
+            left: 2rem;
+        }
+        #nextBtn {
+            right: 2rem;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 md:p-8">
+
+    <div id="presentation-container" class="w-full max-w-6xl">
+
+        <!-- Slide 1: Title -->
+        <div id="slide1" class="slide active items-center justify-center text-center">
+            <div>
+                <h1 class="text-6xl md:text-8xl font-black tracking-tighter gradient-text">Semiconductor Industry</h1>
+                <h2 class="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-slate-800">Navigating the Next Wave of Growth</h2>
+                <p class="mt-6 text-xl text-slate-500">A Visual Report on Key Trends, Players, and Investment Opportunities</p>
+                <p class="mt-2 text-lg text-slate-400">September 2025</p>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 1 / 17</p>
+        </div>
+
+        <!-- Slide 2: Market Snapshot -->
+        <div id="slide2" class="slide">
+            <div>
+                <h2 class="text-xl font-bold text-indigo-600">The Big Picture</h2>
+                <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">2025 Market Snapshot: The Rebound</h1>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                    <div class="bg-slate-50 p-8 rounded-2xl">
+                        <p class="text-7xl lg:text-8xl font-black text-indigo-600">$624B</p>
+                        <p class="mt-2 text-2xl font-bold text-slate-700">Projected Global Revenue</p>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl">
+                        <p class="text-7xl lg:text-8xl font-black text-indigo-600">+16%</p>
+                        <p class="mt-2 text-2xl font-bold text-slate-700">Projected Year-Over-Year Growth</p>
+                    </div>
+                </div>
+                 <p class="mt-8 text-xl text-center text-slate-600">A period of unprecedented transformation, driven by relentless innovation and surging demand from next-generation technologies.</p>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 2 / 17</p>
+        </div>
+
+        <!-- Slide 3: Industry Evolution Consolidated -->
+        <div id="slide3" class="slide">
+            <div>
+                <h2 class="text-xl font-bold text-indigo-600">A Three-Act Story</h2>
+                <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">The Evolution of the Industry Model</h1>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="bg-slate-50 p-6 rounded-2xl h-full flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-slate-800">1. The Age of IDMs</h3>
+                        <p class="mt-2 text-slate-600">Early pioneers controlled the entire process in a <span class="font-semibold">vertically-integrated</span> model, from design to manufacturing.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl h-full flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-slate-800">2. The Fabless-Foundry Rise</h3>
+                        <p class="mt-2 text-slate-600">The value chain <span class="font-semibold">disaggregated</span>, allowing "fabless" firms to outsource manufacturing to specialized "foundries".</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl h-full flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-slate-800">3. The Era of Hybrid Models</h3>
+                        <p class="mt-2 text-slate-600">With fab costs soaring to <span class="font-semibold">$40B+</span>, even IDMs like Intel are adopting <span class="font-semibold">collaborative, hybrid</span> strategies.</p>
+                    </div>
+                </div>
+                <p class="mt-6 text-xl text-center text-slate-500">From total integration to deep specialization, the industry structure has profoundly transformed.</p>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 3 / 17</p>
+        </div>
+
+        <!-- Slide 4: Value Chain 1/4 - EDA & IP -->
+        <div id="slide4" class="slide">
+            <div>
+                <h2 class="text-xl font-bold text-indigo-600">The Value Chain (1/4)</h2>
+                <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">The Blueprint: EDA & IP</h1>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center">
+                        <svg class="w-24 h-24 text-indigo-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                        <p class="mt-4 text-2xl font-bold text-slate-700">Every chip begins as an idea, conceived with sophisticated software and pre-designed functional blocks (IP).</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-indigo-50 p-6 rounded-2xl">
+                            <p class="text-5xl font-black text-indigo-600">$25B+</p>
+                            <p class="text-xl font-bold text-slate-700">Combined 2025 Market for EDA Software & IP</p>
+                        </div>
+                         <div class="bg-indigo-50 p-6 rounded-2xl">
+                            <p class="text-xl font-bold text-slate-700">Key Players: <span class="text-indigo-600">Synopsys, Cadence, Arm</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 4 / 17</p>
+        </div>
+
+        <!-- Slide 5: Value Chain 2/4 - Fabless Design -->
+        <div id="slide5" class="slide">
+            <div>
+                <h2 class="text-xl font-bold text-indigo-600">The Value Chain (2/4)</h2>
+                <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">The Architects: Fabless Design</h1>
+                <p class="mt-4 text-xl text-slate-600">These are the architects of the semiconductor world, focusing on design and marketing while outsourcing manufacturing.</p>
+                <div class="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div class="bg-slate-50 p-6 rounded-2xl"><p class="font-bold text-2xl">NVIDIA</p><p class="mt-2 text-slate-500">GPUs for AI & Gaming</p></div>
+                    <div class="bg-slate-50 p-6 rounded-2xl"><p class="font-bold text-2xl">Qualcomm</p><p class="mt-2 text-slate-500">Mobile SoCs & Modems</p></div>
+                    <div class="bg-slate-50 p-6 rounded-2xl"><p class="font-bold text-2xl">Broadcom</p><p class="mt-2 text-slate-500">Networking & Comms</p></div>
+                    <div class="bg-slate-50 p-6 rounded-2xl"><p class="font-bold text-2xl">Apple</p><p class="mt-2 text-slate-500">Custom Silicon</p></div>
+                </div>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 5 / 17</p>
+        </div>
+
+        <!-- Slide 6: Value Chain 3/4 - Manufacturing -->
+        <div id="slide6" class="slide">
+            <div>
+                <h2 class="text-xl font-bold text-indigo-600">The Value Chain (3/4)</h2>
+                <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">The Manufacturers: Foundries & IDMs</h1>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center">
+                        <svg class="w-24 h-24 text-indigo-500 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        <p class="mt-4 text-2xl font-bold text-slate-700">The capital-intensive heart of the industry, where designs are fabricated on silicon wafers.</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-indigo-50 p-6 rounded-2xl">
+                            <p class="text-5xl font-black text-indigo-600">>60%</p>
+                            <p class="text-xl font-bold text-slate-700">Market share held by TSMC, the leading pure-play foundry.</p>
+                        </div>
+                         <div class="bg-indigo-50 p-6 rounded-2xl">
+                            <p class="text-5xl font-black text-indigo-600">$150B+</p>
+                            <p class="text-xl font-bold text-slate-700">Projected 2025 pure-play foundry market.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 6 / 17</p>
+        </div>
+
+        <!-- Slide 7: Value Chain 4/4 - Final Product -->
+        <div id="slide7" class="slide">
+            <div>
+                <h2 class="text-xl font-bold text-indigo-600">The Value Chain (4/4)</h2>
+                <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">The Final Product: Assembly, Test & Packaging</h1>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center">
+                        <svg class="w-24 h-24 text-indigo-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                        <p class="mt-4 text-2xl font-bold text-slate-700">The final stage where wafers are cut, packaged, and tested. Advanced packaging is now critical for system performance.</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-indigo-50 p-6 rounded-2xl">
+                            <p class="text-5xl font-black text-indigo-600">$45-50B</p>
+                            <p class="text-xl font-bold text-slate-700">Projected 2025 OSAT Market</p>
+                        </div>
+                         <div class="bg-indigo-50 p-6 rounded-2xl">
+                            <p class="text-xl font-bold text-slate-700">Key Players: <span class="text-indigo-600">ASE Tech, Amkor, JCET</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 7 / 17</p>
+        </div>
+
+        <!-- Slide 8: Megatrend AI -->
+        <div id="slide8" class="slide">
+            <div>
+                 <h2 class="text-xl font-bold text-pink-600">Megatrend #1</h2>
+                 <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">The AI Revolution</h1>
+                 <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center">
+                        <svg class="w-24 h-24 text-pink-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <p class="mt-4 text-2xl font-bold text-slate-700">AI is fueling an enormous and sustained demand for high-performance compute.</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-pink-50 p-6 rounded-2xl">
+                            <p class="text-5xl font-black text-pink-600">>$500B</p>
+                            <p class="text-xl font-bold text-slate-700">Projected AI chip sales by 2028</p>
+                        </div>
+                         <div class="bg-pink-50 p-6 rounded-2xl">
+                            <p class="text-5xl font-black text-pink-600">>$400B</p>
+                            <p class="text-xl font-bold text-slate-700">Data Center AI chip market by 2030</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 8 / 17</p>
+        </div>
+        
+        <!-- Slide 9: Megatrend Automotive -->
+        <div id="slide9" class="slide">
+            <div>
+                 <h2 class="text-xl font-bold text-emerald-600">Megatrend #2</h2>
+                 <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">The Automotive Transformation</h1>
+                 <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center">
+                        <svg class="w-24 h-24 text-emerald-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <p class="mt-4 text-2xl font-bold text-slate-700">Vehicles are becoming "rolling data centers", driving demand for specialized chips.</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-emerald-50 p-6 rounded-2xl">
+                            <p class="text-5xl font-black text-emerald-600">3x More</p>
+                            <p class="text-xl font-bold text-slate-700">Semiconductor content in EVs vs. traditional cars</p>
+                        </div>
+                         <div class="bg-emerald-50 p-6 rounded-2xl">
+                            <p class="text-5xl font-black text-emerald-600">$1,400+</p>
+                            <p class="text-xl font-bold text-slate-700">Chip content per vehicle by 2030</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 9 / 17</p>
+        </div>
+
+        <!-- Slide 10: Megatrend Geopolitics -->
+        <div id="slide10" class="slide">
+            <div>
+                <h2 class="text-xl font-bold text-sky-600">Megatrend #3</h2>
+                <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">Geopolitics & Supply Chain Resilience</h1>
+                <p class="mt-4 text-xl text-slate-600">Nations are racing to secure their semiconductor supply chains through massive industrial policy initiatives.</p>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-sky-50 p-8 rounded-2xl">
+                        <p class="text-6xl font-black text-sky-600">30%</p>
+                        <p class="mt-2 text-xl font-bold text-slate-700">U.S. Goal</p>
+                        <p class="text-slate-500">for global wafer fab share by 2030, spurred by the $52.7B CHIPS Act.</p>
+                    </div>
+                    <div class="bg-sky-50 p-8 rounded-2xl">
+                        <p class="text-6xl font-black text-sky-600">20%</p>
+                        <p class="mt-2 text-xl font-bold text-slate-700">E.U. Goal</p>
+                        <p class="text-slate-500">for global market share by 2030, driven by its own Chips Act.</p>
+                    </div>
+                    <div class="bg-sky-50 p-8 rounded-2xl">
+                         <p class="text-6xl font-black text-sky-600">#1</p>
+                        <p class="mt-2 text-xl font-bold text-slate-700">Taiwan & S. Korea</p>
+                        <p class="text-slate-500">remain dominant in production and memory, a key focus of geopolitical attention.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 10 / 17</p>
+        </div>
+
+        <!-- Slide 11: Megatrend Advanced Packaging -->
+        <div id="slide11" class="slide">
+            <div>
+                <h2 class="text-xl font-bold text-violet-600">Megatrend #4</h2>
+                <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">Beyond Moore's Law: Chiplets & Advanced Packaging</h1>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                     <div class="text-center">
+                        <svg class="w-24 h-24 text-violet-500 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25 1.313M12 12.75V15m0-2.25l2.25 1.313M4.5 15.75l2.25-1.313M4.5 15.75l2.25 1.313M4.5 15.75V18m15-2.25l-2.25-1.313M19.5 15.75l-2.25 1.313M19.5 15.75V18M9 21V9.75l3-1.75 3 1.75V21" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 6.375l2.25-1.313M5.25 6.375l2.25 1.313M5.25 6.375V9m13.5-2.625l-2.25-1.313M18.75 6.375l-2.25 1.313M18.75 6.375V9" />
+                        </svg>
+                        <p class="mt-4 text-2xl font-bold text-slate-700">As traditional scaling slows, modular "chiplet" designs are becoming critical for performance.</p>
+                    </div>
+                    <div>
+                         <div class="bg-violet-50 p-6 rounded-2xl">
+                            <p class="text-4xl md:text-5xl font-black text-violet-600">$67B &rarr; $168B</p>
+                            <p class="mt-2 text-xl font-bold text-slate-700">Projected growth of the 2.5D/3D IC packaging market from 2025 to 2034.</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 11 / 17</p>
+        </div>
+        
+        <!-- Slide 12: Growth Sectors -->
+        <div id="slide12" class="slide">
+             <div>
+                <h2 class="text-xl font-bold text-indigo-600">Where the Growth Is</h2>
+                <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">Top Growth Sectors to Watch</h1>
+                <div class="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div class="bg-slate-50 p-6 rounded-2xl">
+                        <p class="text-5xl font-black text-indigo-600">>15%</p>
+                        <p class="font-bold text-xl mt-2">AI & Data Centers</p>
+                        <p class="text-slate-500">Annual Growth</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl">
+                        <p class="text-5xl font-black text-indigo-600">8-10%</p>
+                        <p class="font-bold text-xl mt-2">Automotive</p>
+                        <p class="text-slate-500">CAGR thru 2030</p>
+                    </div>
+                     <div class="bg-slate-50 p-6 rounded-2xl">
+                        <p class="text-5xl font-black text-indigo-600">~9%</p>
+                        <p class="font-bold text-xl mt-2">Industrial IoT</p>
+                        <p class="text-slate-500">Annual Growth</p>
+                    </div>
+                     <div class="bg-slate-50 p-6 rounded-2xl">
+                        <p class="text-5xl font-black text-indigo-600">$18B</p>
+                        <p class="font-bold text-xl mt-2">Space & Defense</p>
+                        <p class="text-slate-500">Market by 2034</p>
+                    </div>
+                </div>
+             </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 12 / 17</p>
+        </div>
+
+        <!-- Slide 13: Investment Landscape - AI/HPC -->
+        <div id="slide13" class="slide">
+            <div>
+                 <h2 class="text-xl font-bold text-pink-600">Investment Opportunities (1/4)</h2>
+                 <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">AI & High-Performance Computing Titans</h1>
+                 <p class="mt-4 text-xl text-slate-600">These companies design the essential hardware that powers the AI revolution.</p>
+                 <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-pink-50 p-6 rounded-2xl">
+                        <p class="font-bold text-2xl text-pink-700">NVIDIA ($NVDA)</p>
+                        <p class="mt-2 text-slate-600">The clear leader in GPUs for AI training, protected by a significant software moat (CUDA).</p>
+                    </div>
+                    <div class="bg-pink-50 p-6 rounded-2xl">
+                        <p class="font-bold text-2xl text-pink-700">AMD ($AMD)</p>
+                        <p class="mt-2 text-slate-600">A formidable competitor in both high-performance GPUs and CPUs for servers and PCs.</p>
+                    </div>
+                    <div class="bg-pink-50 p-6 rounded-2xl">
+                        <p class="font-bold text-2xl text-pink-700">Broadcom ($AVGO)</p>
+                        <p class="mt-2 text-slate-600">A key enabler of AI networking infrastructure with high-speed switches and custom silicon.</p>
+                    </div>
+                 </div>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 13 / 17</p>
+        </div>
+
+        <!-- Slide 14: Investment Landscape - Automotive -->
+        <div id="slide14" class="slide">
+            <div>
+                 <h2 class="text-xl font-bold text-emerald-600">Investment Opportunities (2/4)</h2>
+                 <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">Automotive Semiconductor Powerhouses</h1>
+                 <p class="mt-4 text-xl text-slate-600">Supplying the critical microcontrollers, sensors, and power management chips for EVs and ADAS.</p>
+                 <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-emerald-50 p-4 rounded-2xl"><p class="font-bold text-xl text-emerald-700">Infineon ($IFX)</p><p class="mt-1 text-slate-600">Global leader in automotive MCUs and power semis.</p></div>
+                    <div class="bg-emerald-50 p-4 rounded-2xl"><p class="font-bold text-xl text-emerald-700">NXP ($NXPI)</p><p class="mt-1 text-slate-600">Top player in automotive processing and radar solutions.</p></div>
+                    <div class="bg-emerald-50 p-4 rounded-2xl"><p class="font-bold text-xl text-emerald-700">onsemi ($ON)</p><p class="mt-1 text-slate-600">Major supplier of power management and image sensing.</p></div>
+                    <div class="bg-emerald-50 p-4 rounded-2xl"><p class="font-bold text-xl text-emerald-700">Wolfspeed ($WOLF)</p><p class="mt-1 text-slate-600">A pure-play leader in Silicon Carbide (SiC) for EV efficiency.</p></div>
+                 </div>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 14 / 17</p>
+        </div>
+        
+        <!-- Slide 15: Investment Landscape - Enablers -->
+        <div id="slide15" class="slide">
+            <div>
+                 <h2 class="text-xl font-bold text-sky-600">Investment Opportunities (3/4)</h2>
+                 <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">The Enablers: "Picks and Shovels"</h1>
+                 <p class="mt-4 text-xl text-slate-600">These companies provide the indispensable equipment, materials, and services to manufacture chips.</p>
+                 <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-sky-50 p-6 rounded-2xl">
+                        <p class="font-bold text-2xl text-sky-700">ASML ($ASML)</p>
+                        <p class="mt-2 text-slate-600">Holds a monopoly on EUV lithography machines required for all advanced chips.</p>
+                    </div>
+                    <div class="bg-sky-50 p-6 rounded-2xl">
+                        <p class="font-bold text-2xl text-sky-700">TSMC ($TSM)</p>
+                        <p class="mt-2 text-slate-600">The world's leading foundry, a direct beneficiary of the entire fabless industry's growth.</p>
+                    </div>
+                    <div class="bg-sky-50 p-6 rounded-2xl">
+                        <p class="font-bold text-2xl text-sky-700">Applied Materials / Lam Research</p>
+                        <p class="mt-2 text-slate-600">Provide the essential deposition and etch equipment that all fabs rely on.</p>
+                    </div>
+                 </div>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 15 / 17</p>
+        </div>
+
+        <!-- Slide 16: Investment Landscape - Software/Design -->
+        <div id="slide16" class="slide">
+            <div>
+                 <h2 class="text-xl font-bold text-violet-600">Investment Opportunities (4/4)</h2>
+                 <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">Foundational Software & Design Leaders</h1>
+                 <p class="mt-4 text-xl text-slate-600">Dominating the critical IP and software layers upon which all modern chips are designed.</p>
+                 <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-violet-50 p-6 rounded-2xl">
+                        <p class="font-bold text-2xl text-violet-700">Cadence ($CDNS) & Synopsys ($SNPS)</p>
+                        <p class="mt-2 text-slate-600">The duopoly in EDA software, essential for every chip design process.</p>
+                    </div>
+                    <div class="bg-violet-50 p-6 rounded-2xl">
+                        <p class="font-bold text-2xl text-violet-700">Arm ($ARM)</p>
+                        <p class="mt-2 text-slate-600">Its energy-efficient CPU architecture is foundational to mobile and expanding into data centers and PCs.</p>
+                    </div>
+                    <div class="bg-violet-50 p-6 rounded-2xl">
+                        <!-- Empty placeholder for layout consistency if needed -->
+                    </div>
+                 </div>
+            </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 16 / 17</p>
+        </div>
+
+        <!-- Slide 17: Conclusion -->
+        <div id="slide17" class="slide">
+             <div>
+                <h2 class="text-xl font-bold text-indigo-600">Final Thoughts</h2>
+                <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mt-2">Conclusion & The Next Frontier</h1>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Key Takeaways</h3>
+                        <ul class="space-y-3 text-lg text-slate-600 list-disc list-inside">
+                            <li>The industry is in a strong, <span class="font-bold">demand-driven growth phase</span>.</li>
+                            <li><span class="font-bold">AI & Automotive</span> are the primary, long-term secular drivers.</li>
+                            <li><span class="font-bold">Geopolitics</span> is fundamentally reshaping supply chains.</li>
+                             <li>The entire ecosystem, from <span class="font-bold">design to packaging</span>, offers investment opportunities.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl">
+                         <h3 class="text-2xl font-bold text-slate-800 mb-2">The Next Frontier: Quantum</h3>
+                         <p class="text-lg text-slate-600">While early, Quantum and Neuromorphic computing represent a transformative, long-term growth vector emerging from the semiconductor industry's capabilities.</p>
+                         <p class="mt-4 text-5xl font-black text-indigo-600">$45-130B</p>
+                         <p class="text-xl font-bold text-slate-700">Projected Quantum Market by 2040 (McKinsey)</p>
+                    </div>
+                </div>
+             </div>
+            <p class="w-full text-right text-slate-400 font-medium">Slide 17 / 17</p>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <button id="prevBtn" class="nav-button">Previous</button>
+    <button id="nextBtn" class="nav-button">Next</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentSlide = 1;
+            const totalSlides = 17; // Updated total slides
+            const slides = document.querySelectorAll('.slide');
+
+            function showSlide(slideNumber) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                const newSlide = document.getElementById(`slide${slideNumber}`);
+                if (newSlide) {
+                    newSlide.classList.add('active');
+                }
+                
+                document.getElementById('prevBtn').style.display = slideNumber === 1 ? 'none' : 'block';
+                document.getElementById('nextBtn').style.display = slideNumber === totalSlides ? 'none' : 'block';
+            }
+
+            document.getElementById('nextBtn').addEventListener('click', () => {
+                if (currentSlide < totalSlides) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+
+            document.getElementById('prevBtn').addEventListener('click', () => {
+                if (currentSlide > 1) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+            
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
+
