@@ -103,7 +103,8 @@ body {
 .slide-container .bleed-text-side p,
 .slide-container .qa-layout .contact-info,
 .slide-container cite,
-.slide-container blockquote {
+.slide-container blockquote,
+.slide-container svg text { /* Added for SVG text */
   color: #f0f0f0; /* Light Gray */
   font-family: 'Lato', sans-serif;
 }
@@ -230,15 +231,14 @@ body {
   width: 100%;
 }
 
-.image-wrapper img {
+.image-wrapper img, .image-wrapper svg { /* Modified to include SVG */
   height: 100%;
   object-fit: cover;
   width: 100%;
 }
 
-.two-column .image-wrapper img {
-  object-fit: contain; /* Good for diagrams */
-}
+/* Removed object-fit:contain as SVG handles its own layout */
+
 
 .tiled-content {
   align-items: stretch;
@@ -540,8 +540,8 @@ body {
         <h1 style="background-image: linear-gradient(to right, #00aaff, #00f0c0); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Silicon IP Ecosystem Analysis</h1>
         <p class="subtitle">The Essential Building Blocks of the Semiconductor Industry</p>
     </div>
-    <!-- Applying the background image to the slide container -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 1)), url('[https://placehold.co/1280x720/000000/FFFFFF?text=Semiconductor+Wafer](https://placehold.co/1280x720/000000/FFFFFF?text=Semiconductor+Wafer)'); background-size: cover; background-position: center; z-index: 0; opacity: 0.8;"></div>
+    <!-- FIXED: Replaced external placeholder with a properly URL-encoded inline SVG data URI -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 1)), url(&quot;data:image/svg+xml,%3Csvg width='1280' height='720' xmlns='[http://www.w3.org/2000/svg'%3E%3Crect](http://www.w3.org/2000/svg'%3E%3Crect) width='1280' height='720' fill='%230d1117'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Lato, sans-serif' font-size='70px' fill='%23333'%3ESemiconductor Wafer%3C/text%3E%3C/svg%3E&quot;); background-size: cover; background-position: center; z-index: 0; opacity: 0.8;"></div>
 </div>
 
 <!-- Slide 2: Executive Summary -->
@@ -654,9 +654,13 @@ body {
                 </ul>
             </div>
             <div>
-                <!-- FIXED: Replaced googleusercontent URL with a stable placehold.co URL -->
+                <!-- FIXED: Replaced <img> with a properly URL-encoded inline SVG data URI -->
                 <div class="image-wrapper" style="height: 450px;">
-                    <img src="[https://placehold.co/600x450/1a1f26/f0f0f0?text=Semiconductor+Ecosystem%0A(IP+Vendors,+EDA,+Fabless,+Foundries](https://placehold.co/600x450/1a1f26/f0f0f0?text=Semiconductor+Ecosystem%0A(IP+Vendors,+EDA,+Fabless,+Foundries))" alt="Semiconductor Ecosystem Diagram">
+                    <svg width="100%" height="450" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" style="background-color: #1a1f26; border-radius: 8px;">
+                      <rect width="100%" height="100%" fill="#1a1f26"/>
+                      <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="Lato, sans-serif" font-size="24px" fill="#f0f0f0">Semiconductor Ecosystem</text>
+                      <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Lato, sans-serif" font-size="24px" fill="#f0f0f0">(IP Vendors, EDA, Fabless, Foundries)</text>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -774,9 +778,13 @@ body {
                 </ul>
             </div>
             <div>
-                <!-- FIXED: Replaced googleusercontent URL with a stable placehold.co URL -->
+                <!-- FIXED: Replaced <img> with a properly URL-encoded inline SVG data URI -->
                 <div class="image-wrapper" style="height: 450px;">
-                    <img src="[https://placehold.co/600x450/1a1f26/f0f0f0?text=High-Speed+Interface+IP%0A(PCIe,+HBM,+SerDes](https://placehold.co/600x450/1a1f26/f0f0f0?text=High-Speed+Interface+IP%0A(PCIe,+HBM,+SerDes))" alt="Close-up of server memory modules and circuit board lanes">
+                    <svg width="100%" height="450" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" style="background-color: #1a1f26; border-radius: 8px;">
+                      <rect width="100%" height="100%" fill="#1a1f26"/>
+                      <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="Lato, sans-serif" font-size="24px" fill="#f0f0f0">High-Speed Interface IP</text>
+                      <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Lato, sans-serif" font-size="24px" fill="#f0f0f0">(PCIe, HBM, SerDes)</text>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -896,8 +904,9 @@ body {
 <!-- Slide 15: TakeAway & Q&A -->
 <div class="slide-container" id="slide15">
     <div class="qa-layout">
-        <!-- FIXED: Replaced googleusercontent URL with a stable placehold.co URL -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 1)), url('[https://placehold.co/1280x720/000000/FFFFFF?text=Semiconductor+Wafer](https://placehold.co/1280x720/000000/FFFFFF?text=Semiconductor+Wafer)'); background-size: cover; background-position: center; z-index: 0; opacity: 0.5;"></div>
+        
+        <!-- FIXED: Replaced external placeholder with a properly URL-encoded inline SVG data URI -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 1)), url(&quot;data:image/svg+xml,%3Csvg width='1280' height='720' xmlns='[http://www.w3.org/2000/svg'%3E%3Crect](http://www.w3.org/2000/svg'%3E%3Crect) width='1280' height='720' fill='%230d1117'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Lato, sans-serif' font-size='70px' fill='%23333'%3ESemiconductor Wafer%3C/text%3E%3C/svg%3E&quot;); background-size: cover; background-position: center; z-index: 0; opacity: 0.5;"></div>
         
         <h2>TakeAway</h2>
         <p>The Silicon IP market is a high-margin, indispensable "tollbooth" on the semiconductor superhighway. Its growth is locked to the industry's biggest drivers: <strong>AI, Automotive, and Chiplets</strong>. The leaders (Arm, Synopsys, Cadence) have created deep, defensible moats, making the sector a strategic linchpin for all modern technology.</p>
