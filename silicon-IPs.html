@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silicon IP Ecosystem Analysis</title>
-    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-    <link href="[https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&family=Lato:wght@400;700&display=swap](https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&family=Lato:wght@400;700&display=swap)" rel="stylesheet">
-    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css)">
+    <!-- FIXED: Corrected font and icon links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
 /* 1. THE SETUP */
 
@@ -231,13 +232,11 @@ body {
   width: 100%;
 }
 
-.image-wrapper img, .image-wrapper svg { /* Modified to include SVG */
+.image-wrapper img, .image-wrapper svg {
   height: 100%;
   object-fit: cover;
   width: 100%;
 }
-
-/* Removed object-fit:contain as SVG handles its own layout */
 
 
 .tiled-content {
@@ -541,7 +540,7 @@ body {
         <p class="subtitle">The Essential Building Blocks of the Semiconductor Industry</p>
     </div>
     <!-- FIXED: Replaced external placeholder with a properly URL-encoded inline SVG data URI -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 1)), url(&quot;data:image/svg+xml,%3Csvg width='1280' height='720' xmlns='[http://www.w3.org/2000/svg'%3E%3Crect](http://www.w3.org/2000/svg'%3E%3Crect) width='1280' height='720' fill='%230d1117'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Lato, sans-serif' font-size='70px' fill='%23333'%3ESemiconductor Wafer%3C/text%3E%3C/svg%3E&quot;); background-size: cover; background-position: center; z-index: 0; opacity: 0.8;"></div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 1)), url(&quot;data:image/svg+xml,%3Csvg width='1280' height='720' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1280' height='720' fill='%230d1117'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Lato, sans-serif' font-size='70px' fill='%23333'%3ESemiconductor Wafer%3C/text%3E%3C/svg%3E&quot;); background-size: cover; background-position: center; z-index: 0; opacity: 0.8;"></div>
 </div>
 
 <!-- Slide 2: Executive Summary -->
@@ -654,13 +653,12 @@ body {
                 </ul>
             </div>
             <div>
-                <!-- FIXED: Replaced <img> with a properly URL-encoded inline SVG data URI -->
+                <!-- FIXED: Replaced SVG with user-provided image and added styles for visibility -->
                 <div class="image-wrapper" style="height: 450px;">
-                    <svg width="100%" height="450" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" style="background-color: #1a1f26; border-radius: 8px;">
-                      <rect width="100%" height="100%" fill="#1a1f26"/>
-                      <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="Lato, sans-serif" font-size="24px" fill="#f0f0f0">Semiconductor Ecosystem</text>
-                      <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Lato, sans-serif" font-size="24px" fill="#f0f0f0">(IP Vendors, EDA, Fabless, Foundries)</text>
-                    </svg>
+                    <img src="https://image.semiconductor.samsung.com/image/samsung/p6/semiconductor/suppport/dictionary/from-foundry-to-fabless-an-overview-of-the-semiconductor-ecosystem_pc_2-1_en.png?$ORIGIN_PNG$" 
+                         alt="Semiconductor Ecosystem Diagram" 
+                         style="object-fit: contain; background-color: #fff;"
+                         onerror="this.parentElement.innerHTML = '<div style=\'color:#aaa; display: grid; place-items: center; height: 100%; background: #222;\'>Image Source Not Reachable</div>'">
                 </div>
             </div>
         </div>
@@ -778,13 +776,11 @@ body {
                 </ul>
             </div>
             <div>
-                <!-- FIXED: Replaced <img> with a properly URL-encoded inline SVG data URI -->
+                <!-- FIXED: Replaced SVG with user-provided image -->
                 <div class="image-wrapper" style="height: 450px;">
-                    <svg width="100%" height="450" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" style="background-color: #1a1f26; border-radius: 8px;">
-                      <rect width="100%" height="100%" fill="#1a1f26"/>
-                      <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="Lato, sans-serif" font-size="24px" fill="#f0f0f0">High-Speed Interface IP</text>
-                      <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Lato, sans-serif" font-size="24px" fill="#f0f0f0">(PCIe, HBM, SerDes)</text>
-                    </svg>
+                    <img src="https://acecomputers.com/wp-content/uploads/2025/06/Close-Up-Motherboard-1000x1050.jpg" 
+                         alt="High-Speed Interface IP on a motherboard" 
+                         onerror="this.parentElement.innerHTML = '<div style=\'color:#aaa; display: grid; place-items: center; height: 100%; background: #222;\'>Image Source Not Reachable</div>'">
                 </div>
             </div>
         </div>
@@ -906,7 +902,7 @@ body {
     <div class="qa-layout">
         
         <!-- FIXED: Replaced external placeholder with a properly URL-encoded inline SVG data URI -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 1)), url(&quot;data:image/svg+xml,%3Csvg width='1280' height='720' xmlns='[http://www.w3.org/2000/svg'%3E%3Crect](http://www.w3.org/2000/svg'%3E%3Crect) width='1280' height='720' fill='%230d1117'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Lato, sans-serif' font-size='70px' fill='%23333'%3ESemiconductor Wafer%3C/text%3E%3C/svg%3E&quot;); background-size: cover; background-position: center; z-index: 0; opacity: 0.5;"></div>
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 1)), url(&quot;data:image/svg+xml,%3Csvg width='1280' height='720' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1280' height='720' fill='%230d1117'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Lato, sans-serif' font-size='70px' fill='%23333'%3ESemiconductor Wafer%3C/text%3E%3C/svg%3E&quot;); background-size: cover; background-position: center; z-index: 0; opacity: 0.5;"></div>
         
         <h2>TakeAway</h2>
         <p>The Silicon IP market is a high-margin, indispensable "tollbooth" on the semiconductor superhighway. Its growth is locked to the industry's biggest drivers: <strong>AI, Automotive, and Chiplets</strong>. The leaders (Arm, Synopsys, Cadence) have created deep, defensible moats, making the sector a strategic linchpin for all modern technology.</p>
@@ -916,3 +912,4 @@ body {
 
 </body>
 </html>
+```
